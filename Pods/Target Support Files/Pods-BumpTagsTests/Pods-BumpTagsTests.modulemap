@@ -1,0 +1,6 @@
+framework module Pods_BumpTagsTests {
+  umbrella header "Pods-BumpTagsTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
