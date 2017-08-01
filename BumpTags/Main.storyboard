@@ -43,6 +43,7 @@
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.47843137254901957" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="SJs-1g-ubv" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="0L0-aP-3YX"/>
                             <constraint firstItem="Hjb-wx-Z5h" firstAttribute="centerX" secondItem="SJs-1g-ubv" secondAttribute="centerX" id="7oS-xw-fzM"/>
@@ -52,6 +53,9 @@
                             <constraint firstItem="SJs-1g-ubv" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="osY-Ep-Fz3"/>
                             <constraint firstItem="5fX-Yx-hhw" firstAttribute="top" secondItem="Hjb-wx-Z5h" secondAttribute="bottom" constant="8" id="tbK-RL-lYb"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="0fr-jd-GDw" appends="YES" id="MJY-zT-91W"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" title="BumpTags" id="knc-Oq-n7h">
                         <barButtonItem key="backBarButtonItem" title="Back" id="oo3-1j-uwZ"/>
@@ -70,6 +74,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <screenEdgePanGestureRecognizer minimumNumberOfTouches="1" id="0fr-jd-GDw"/>
             </objects>
             <point key="canvasLocation" x="836" y="123"/>
         </scene>
