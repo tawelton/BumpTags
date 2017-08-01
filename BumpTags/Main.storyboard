@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.17" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="S6b-Ah-NjC">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13168.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="S6b-Ah-NjC">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.14"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13147.4"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -12,30 +12,30 @@
         <!--BumpTags-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Lyaze" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="BumpTags" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="672"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SJs-1g-ubv">
-                                <rect key="frame" x="117.66666666666669" y="278" width="179" height="180"/>
+                                <rect key="frame" x="117.66666666666669" y="246" width="179" height="180"/>
                                 <state key="normal" image="scanButton"/>
                                 <connections>
                                     <action selector="readNFC:" destination="BYZ-38-t0r" eventType="touchUpInside" id="E8k-bT-f3k"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" alpha="0.25" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap to scan" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5fX-Yx-hhw">
-                                <rect key="frame" x="20" y="512" width="374" height="41"/>
+                                <rect key="frame" x="20" y="480" width="374" height="41"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="34"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="TapToScan-Arrow" translatesAutoresizingMaskIntoConstraints="NO" id="Hjb-wx-Z5h">
-                                <rect key="frame" x="195" y="480" width="24" height="24"/>
+                                <rect key="frame" x="195" y="448" width="24" height="24"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="24" id="i1y-33-SfO"/>
                                     <constraint firstAttribute="width" constant="24" id="xtD-Hr-lUf"/>
@@ -55,6 +55,13 @@
                     </view>
                     <navigationItem key="navigationItem" title="BumpTags" id="knc-Oq-n7h">
                         <barButtonItem key="backBarButtonItem" title="Back" id="oo3-1j-uwZ"/>
+                        <barButtonItem key="rightBarButtonItem" image="link" id="JEG-dR-coK">
+                            <inset key="imageInsets" minX="0.0" minY="1" maxX="-30" maxY="-7"/>
+                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <segue destination="FkQ-7A-Lio" kind="show" id="u7C-fs-rdb"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="readNFC" destination="SJs-1g-ubv" id="pJE-le-dEj"/>
@@ -64,16 +71,52 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="424.63768115942031" y="122.28260869565219"/>
+            <point key="canvasLocation" x="836" y="123"/>
+        </scene>
+        <!--Saved Tags-->
+        <scene sceneID="5nm-47-u9M">
+            <objects>
+                <tableViewController title="Saved Tags" id="FkQ-7A-Lio" customClass="SavedTagsTVC" customModule="BumpTags" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="90" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="vBM-Jt-Djh">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="672"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="Wwa-rt-xSs">
+                                <rect key="frame" x="0.0" y="28" width="414" height="90"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Wwa-rt-xSs" id="0Yr-DJ-9UU">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="89.666666666666671"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="FkQ-7A-Lio" id="GZo-oJ-1Qn"/>
+                            <outlet property="delegate" destination="FkQ-7A-Lio" id="sgS-iI-JOW"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wkW-ET-Nqt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1568" y="122"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="rr5-QU-MXP">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="S6b-Ah-NjC" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Thl-ya-yd6">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="Thl-ya-yd6">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="barTintColor" red="0.007994526997" green="0.47174912689999998" blue="0.98316770789999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -87,6 +130,7 @@
     </scenes>
     <resources>
         <image name="TapToScan-Arrow" width="24" height="21"/>
+        <image name="link" width="85" height="85"/>
         <image name="scanButton" width="179" height="180"/>
     </resources>
 </document>

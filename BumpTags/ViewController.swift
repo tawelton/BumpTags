@@ -30,9 +30,14 @@ class ViewController: UIViewController {
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        var savedTags = segue.destination as! SavedTagsTVC
         
-        savedTags.records.append(record)
+        let savedTags = segue.destination as! SavedTagsTVC
+        if let records = helper?.records {
+            for record in records {
+                savedTags.records.append(record)
+            }
+        }
+        
     }
     
     

@@ -13,6 +13,7 @@ import UIKit
 class NFCReader: NSObject, NFCNDEFReaderSessionDelegate {
     
     var onNFCResult: ((Bool, String) -> ())?
+    var records = [BTRecord]()
     
     func restartSession() {
         let session =
@@ -46,6 +47,9 @@ class NFCReader: NSObject, NFCNDEFReaderSessionDelegate {
                         print(payloadType)
                         print([UInt8](record.payload))
                         let uriRecord = BTRecord(tnf: record.typeNameFormat.rawValue, payloadType: record.type, payloadData: record.payload)
+                        
+                        //push to table array
+                        records.append(uriRecord)
                         if let payload = uriRecord.payload {
                             print("Absolute URI: " + payload)
                             if let url = URL(string: payload) {
@@ -59,6 +63,9 @@ class NFCReader: NSObject, NFCNDEFReaderSessionDelegate {
                             if let payload = record.payload {
                                 print(payload)
                                 if record.payloadType == "U" {
+                                    
+                                    // push to table array
+                                    records.append(record)
                                     if let url = URL(string: payload) {
                                         ViewController.openURL(url: url)
                                         

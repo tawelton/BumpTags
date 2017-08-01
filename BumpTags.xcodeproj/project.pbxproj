@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B1044BC91F2C32A400B14AFA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B11AF1561F225A5300630B9A /* Main.storyboard */; };
 		B11AF1291F21F3A200630B9A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B11AF1281F21F3A200630B9A /* AppDelegate.swift */; };
 		B11AF12B1F21F3A200630B9A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B11AF12A1F21F3A200630B9A /* ViewController.swift */; };
 		B11AF1301F21F3A200630B9A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B11AF12F1F21F3A200630B9A /* Assets.xcassets */; };
@@ -16,6 +15,8 @@
 		B11AF1491F21F3A200630B9A /* BumpTagsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B11AF1481F21F3A200630B9A /* BumpTagsUITests.swift */; };
 		B11AF15C1F225AA300630B9A /* NFCReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B11AF15B1F225AA300630B9A /* NFCReader.swift */; };
 		B13264F01F2586480045B49A /* SmartPosterClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B13264EF1F2586480045B49A /* SmartPosterClass.swift */; };
+		B1462B391F30D61C00A0E826 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1462B381F30D60B00A0E826 /* Main.storyboard */; };
+		B1462B3B1F30D7B200A0E826 /* SavedRecordCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1462B3A1F30D7B200A0E826 /* SavedRecordCell.swift */; };
 		B14ECB3F1F2D3E980081D400 /* SavedTagsTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B14ECB3E1F2D3E980081D400 /* SavedTagsTVC.swift */; };
 /* End PBXBuildFile section */
 
@@ -59,13 +60,14 @@
 		B11AF13F1F21F3A200630B9A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B11AF1481F21F3A200630B9A /* BumpTagsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BumpTagsUITests.swift; sourceTree = "<group>"; };
 		B11AF14A1F21F3A200630B9A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B11AF1571F225A5300630B9A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = ../../Documents/Lyaze/Lyaze/Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B11AF15B1F225AA300630B9A /* NFCReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NFCReader.swift; sourceTree = "<group>"; };
 		B11AF15D1F225B9800630B9A /* TagReader.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TagReader.entitlements; sourceTree = "<group>"; };
 		B128F08E1F2D427A00BCE731 /* BumpTagsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BumpTagsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B128F08F1F2D427A00BCE731 /* BumpTagsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BumpTagsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		B128F0901F2D427A00BCE731 /* Widget.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; name = Widget.appex; path = "/Users/tannerwelton/Library/Mobile Documents/com~apple~CloudDocs/BumpTags/build/Debug-iphoneos/Widget.appex"; sourceTree = "<absolute>"; };
 		B13264EF1F2586480045B49A /* SmartPosterClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmartPosterClass.swift; sourceTree = "<group>"; };
+		B13C87B31F3037D400CF2E57 /* Widget.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = Widget.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		B1462B381F30D60B00A0E826 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		B1462B3A1F30D7B200A0E826 /* SavedRecordCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedRecordCell.swift; sourceTree = "<group>"; };
 		B14ECB361F2D26B90081D400 /* BumpTags.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BumpTags.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B14ECB3E1F2D3E980081D400 /* SavedTagsTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedTagsTVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -112,6 +114,7 @@
 				B14ECB361F2D26B90081D400 /* BumpTags.app */,
 				B128F08E1F2D427A00BCE731 /* BumpTagsTests.xctest */,
 				B128F08F1F2D427A00BCE731 /* BumpTagsUITests.xctest */,
+				B13C87B31F3037D400CF2E57 /* Widget.appex */,
 			);
 			sourceTree = "<group>";
 		};
@@ -122,7 +125,8 @@
 				B11AF1281F21F3A200630B9A /* AppDelegate.swift */,
 				B11AF12A1F21F3A200630B9A /* ViewController.swift */,
 				B14ECB3E1F2D3E980081D400 /* SavedTagsTVC.swift */,
-				B11AF1561F225A5300630B9A /* Main.storyboard */,
+				B1462B3A1F30D7B200A0E826 /* SavedRecordCell.swift */,
+				B1462B381F30D60B00A0E826 /* Main.storyboard */,
 				B11AF12F1F21F3A200630B9A /* Assets.xcassets */,
 				B11AF1311F21F3A200630B9A /* LaunchScreen.storyboard */,
 				B11AF15B1F225AA300630B9A /* NFCReader.swift */,
@@ -228,7 +232,7 @@
 			);
 			name = Widget;
 			productName = Widget;
-			productReference = B128F0901F2D427A00BCE731 /* Widget.appex */;
+			productReference = B13C87B31F3037D400CF2E57 /* Widget.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
@@ -284,7 +288,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B1044BC91F2C32A400B14AFA /* Main.storyboard in Resources */,
+				B1462B391F30D61C00A0E826 /* Main.storyboard in Resources */,
 				B11AF1331F21F3A200630B9A /* LaunchScreen.storyboard in Resources */,
 				B11AF1301F21F3A200630B9A /* Assets.xcassets in Resources */,
 			);
@@ -318,6 +322,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B1462B3B1F30D7B200A0E826 /* SavedRecordCell.swift in Sources */,
 				B11AF12B1F21F3A200630B9A /* ViewController.swift in Sources */,
 				B11AF1291F21F3A200630B9A /* AppDelegate.swift in Sources */,
 				B14ECB3F1F2D3E980081D400 /* SavedTagsTVC.swift in Sources */,
@@ -371,14 +376,6 @@
 				B11AF1321F21F3A200630B9A /* Base */,
 			);
 			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-		B11AF1561F225A5300630B9A /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				B11AF1571F225A5300630B9A /* Base */,
-			);
-			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -502,8 +499,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.lyazetechnology.Lyaze5;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "92037f64-6eb2-4c6b-8c88-dd9384e0efdc";
-				PROVISIONING_PROFILE_SPECIFIER = "Tanner Macbook Air 7/29/17";
+				PROVISIONING_PROFILE = "b778abb6-5dbf-428d-b63f-dd281ab9c95d";
+				PROVISIONING_PROFILE_SPECIFIER = "Tanner Work iMac";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -524,8 +521,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.lyazetechnology.Lyaze5;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "92037f64-6eb2-4c6b-8c88-dd9384e0efdc";
-				PROVISIONING_PROFILE_SPECIFIER = "Tanner Macbook Air 7/29/17";
+				PROVISIONING_PROFILE = "b778abb6-5dbf-428d-b63f-dd281ab9c95d";
+				PROVISIONING_PROFILE_SPECIFIER = "Tanner Work iMac";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
