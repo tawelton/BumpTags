@@ -55,8 +55,8 @@
                     </view>
                     <navigationItem key="navigationItem" title="BumpTags" id="knc-Oq-n7h">
                         <barButtonItem key="backBarButtonItem" title="Back" id="oo3-1j-uwZ"/>
-                        <barButtonItem key="rightBarButtonItem" image="link" id="JEG-dR-coK">
-                            <inset key="imageInsets" minX="0.0" minY="1" maxX="-30" maxY="-7"/>
+                        <barButtonItem key="rightBarButtonItem" image="history" id="JEG-dR-coK">
+                            <inset key="imageInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="-6"/>
                             <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
                                 <segue destination="FkQ-7A-Lio" kind="show" id="u7C-fs-rdb"/>
@@ -82,13 +82,45 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="Wwa-rt-xSs">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SavedRecordCell" id="Wwa-rt-xSs" customClass="SavedRecordCell" customModule="BumpTags" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="414" height="90"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Wwa-rt-xSs" id="0Yr-DJ-9UU">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="89.666666666666671"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3d0-18-emC">
+                                            <rect key="frame" x="109" y="24" width="291" height="40"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="291" id="BHb-FB-zdT"/>
+                                                <constraint firstAttribute="height" constant="40" id="gcd-RF-may"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="link" translatesAutoresizingMaskIntoConstraints="NO" id="8Mx-qd-aXe">
+                                            <rect key="frame" x="25" y="19" width="50" height="50"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="50" id="Et4-TY-h1l"/>
+                                                <constraint firstAttribute="width" constant="50" id="niU-0y-ZCr"/>
+                                            </constraints>
+                                        </imageView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="8Mx-qd-aXe" firstAttribute="leading" secondItem="0Yr-DJ-9UU" secondAttribute="leadingMargin" constant="17" id="Eiq-Fj-TbW"/>
+                                        <constraint firstItem="8Mx-qd-aXe" firstAttribute="top" secondItem="0Yr-DJ-9UU" secondAttribute="topMargin" constant="11" id="Kqz-qz-J5i"/>
+                                        <constraint firstItem="3d0-18-emC" firstAttribute="top" secondItem="0Yr-DJ-9UU" secondAttribute="top" constant="24" id="XUm-kf-GBG"/>
+                                        <constraint firstItem="8Mx-qd-aXe" firstAttribute="leading" secondItem="0Yr-DJ-9UU" secondAttribute="leadingMargin" constant="17" id="lsA-dc-3dT"/>
+                                        <constraint firstItem="3d0-18-emC" firstAttribute="leading" secondItem="8Mx-qd-aXe" secondAttribute="trailing" constant="34" id="ndE-cr-UZW"/>
+                                        <constraint firstItem="8Mx-qd-aXe" firstAttribute="top" secondItem="0Yr-DJ-9UU" secondAttribute="topMargin" constant="11" id="oCL-I3-L6s"/>
+                                        <constraint firstAttribute="trailing" secondItem="3d0-18-emC" secondAttribute="trailing" constant="14" id="z92-PC-yfW"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="icon" destination="8Mx-qd-aXe" id="YOA-dL-Fps"/>
+                                    <outlet property="title" destination="3d0-18-emC" id="seR-WT-nTO"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -99,7 +131,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wkW-ET-Nqt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1568" y="122"/>
+            <point key="canvasLocation" x="1547.8260869565217" y="121.46739130434784"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="rr5-QU-MXP">
@@ -130,6 +162,7 @@
     </scenes>
     <resources>
         <image name="TapToScan-Arrow" width="24" height="21"/>
+        <image name="history" width="27" height="27"/>
         <image name="link" width="85" height="85"/>
         <image name="scanButton" width="179" height="180"/>
     </resources>

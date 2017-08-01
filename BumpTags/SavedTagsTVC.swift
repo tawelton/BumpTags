@@ -24,9 +24,17 @@ class SavedTagsTVC: UITableViewController{
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        let cellIdentifier = "SavedRecordCell"
         
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as? SavedRecordCell else {
+            fatalError("The dequed cell is not an instance of SavedRecordCell")
+        }
         
+        // fetch record based on index path from cell variable
+        let record = records[indexPath.row]
+        
+        cell.icon = UIImageView(image: UIImage(named: "link"))
+        cell.title.text = record.payload
         
         return cell
     }

@@ -10,9 +10,11 @@ import UIKit
 
 class SavedRecordCell: UITableViewCell {
 
+    @IBOutlet weak var icon: UIImageView!
+    @IBOutlet weak var title: UILabel!
+    
+    
     //MARK: Properties
-    @IBOutlet weak var icon: SavedRecordCell!
-    @IBOutlet weak var title: SavedRecordCell!
     
     override func awakeFromNib() {
         super.awakeFromNib()
