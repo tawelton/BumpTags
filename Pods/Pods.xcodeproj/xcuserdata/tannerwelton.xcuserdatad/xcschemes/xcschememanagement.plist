@@ -4,69 +4,28 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>DZNEmptyDataSet.xcscheme</key>
+		<key>Alamofire.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>1</integer>
 		</dict>
 		<key>Pods-BumpTags.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>2</integer>
 		</dict>
 		<key>Pods-BumpTagsTests.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>3</integer>
 		</dict>
 		<key>Pods-BumpTagsUITests.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>4</integer>
-		</dict>
-		<key>Pods-Widget.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-			<key>orderHint</key>
-			<integer>5</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
-	<dict>
-		<key>8D9DB8E51625EFD2C411241F5FB3D7A9</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>BAA261B97324C13A8308DA1E8924CD77</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>D386C75EFD4F03725E4EFB866B600B9A</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>E0E1B3079578EB4E0EEDD1D9B0657A11</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>ED7A99F41B0139978775CDCC948E6DAC</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-	</dict>
+	<dict/>
 </dict>
 </plist>

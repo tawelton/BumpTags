@@ -10,6 +10,7 @@
 import Foundation
 import CoreNFC
 import UIKit
+import Alamofire
 
 extension String {
     func index(of string: String, options: CompareOptions = .literal) -> Index? {
@@ -462,6 +463,13 @@ struct BTRecord {
                 self.payload = prefix + getPayload(header: header, messageLength: messageLength)
             }
             
+            // Check if redirect and set to redirect url
+            if let urlString = self.payload {
+                if let url = URL(string: urlString) {
+                    self.payload = getRedirectUrl(url: url)
+                }
+            }
+            
             
 //            print(self.payload)
         }
@@ -535,6 +543,24 @@ struct BTRecord {
         self.title = title
     }
     
+    func getRedirectUrl(url: URL) -> String{
+        var finishFlag = 0
+        var newURL = url
+        Alamofire.request(url).responseJSON { response in
+            if let redirectURL = response.response?.url {
+                newURL = redirectURL
+                finishFlag = 1
+            }
+            else {
+                finishFlag = 1
+            }
+        }
+        while finishFlag == 0 {
+            RunLoop.current.run(mode: RunLoopMode.defaultRunLoopMode, before: NSDate.distantFuture)
+        }
+        return String(describing: newURL)
+    }
+
     
 }
 

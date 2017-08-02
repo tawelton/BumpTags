@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Alamofire
 
 class ViewController: UIViewController {
     
@@ -82,7 +83,7 @@ class ViewController: UIViewController {
                     // pushes title url record and inserts in records array and performs action
                     for record in records {
                         if (record.payloadType == "U") {
-                            let alert = actionAlert(title: "Tag contains a link", message: "Would you like to open now or save for later?", record: record)
+                            actionAlert(title: "Tag contains a link", message: "Would you like to open now or save for later?", record: record)
                             
                             var record = record
                             if let title = title {
@@ -108,7 +109,7 @@ class ViewController: UIViewController {
                             typeMessage = "unknown content"
                         }
                         
-                        let alert2 = actionAlert(title: "Tag contains \(typeMessage)", message: "Would you like to open now or save for later?", record: record)
+                        actionAlert(title: "Tag contains \(typeMessage)", message: "Would you like to open now or save for later?", record: record)
                         
                         if (openRecord) {
                             // determine action
