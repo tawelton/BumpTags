@@ -24,6 +24,8 @@ class SavedTagsTVC: UITableViewController{
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        // resuse identifier - set in storyboard
         let cellIdentifier = "SavedRecordCell"
         
         guard let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as? SavedRecordCell else {
@@ -33,8 +35,26 @@ class SavedTagsTVC: UITableViewController{
         // fetch record based on index path from cell variable
         let record = records[indexPath.row]
         
-        cell.icon = UIImageView(image: UIImage(named: "link"))
-        cell.title.text = record.payload
+        let icons = [UIImage(named: "link-icon.png"), UIImage(named: "text-icon")]
+        
+        // Determine icon for record type
+        print(record.payloadType)
+        if record.payloadType == "U" {
+            cell.icon.image = icons[0]
+        }
+        else if record.payloadType == "T" {
+            cell.icon.image = icons[1]
+        }
+        else {
+            print("record type match failed")
+        }
+        
+        if let title = record.title {
+            cell.title.text = title
+        }
+        else {
+            cell.title.text = record.payload
+        }
         
         return cell
     }
@@ -50,7 +70,7 @@ class SavedTagsTVC: UITableViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
 //        self.tableView.tableFooterView = UIView()
         
         

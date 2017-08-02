@@ -124,13 +124,13 @@
 				B11AF15D1F225B9800630B9A /* TagReader.entitlements */,
 				B11AF1281F21F3A200630B9A /* AppDelegate.swift */,
 				B11AF12A1F21F3A200630B9A /* ViewController.swift */,
+				B11AF15B1F225AA300630B9A /* NFCReader.swift */,
+				B13264EF1F2586480045B49A /* SmartPosterClass.swift */,
 				B14ECB3E1F2D3E980081D400 /* SavedTagsTVC.swift */,
 				B1462B3A1F30D7B200A0E826 /* SavedRecordCell.swift */,
 				B1462B381F30D60B00A0E826 /* Main.storyboard */,
 				B11AF12F1F21F3A200630B9A /* Assets.xcassets */,
 				B11AF1311F21F3A200630B9A /* LaunchScreen.storyboard */,
-				B11AF15B1F225AA300630B9A /* NFCReader.swift */,
-				B13264EF1F2586480045B49A /* SmartPosterClass.swift */,
 				B11AF1341F21F3A200630B9A /* Info.plist */,
 			);
 			path = BumpTags;
@@ -499,8 +499,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.lyazetechnology.Lyaze5;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "92037f64-6eb2-4c6b-8c88-dd9384e0efdc";
-				PROVISIONING_PROFILE_SPECIFIER = "Tanner Macbook Air 7/29/17";
+				PROVISIONING_PROFILE = "b778abb6-5dbf-428d-b63f-dd281ab9c95d";
+				PROVISIONING_PROFILE_SPECIFIER = "Tanner Work iMac";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -521,8 +521,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.lyazetechnology.Lyaze5;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "92037f64-6eb2-4c6b-8c88-dd9384e0efdc";
-				PROVISIONING_PROFILE_SPECIFIER = "Tanner Macbook Air 7/29/17";
+				PROVISIONING_PROFILE = "b778abb6-5dbf-428d-b63f-dd281ab9c95d";
+				PROVISIONING_PROFILE_SPECIFIER = "Tanner Work iMac";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

@@ -22,52 +22,57 @@ class NFCReader: NSObject, NFCNDEFReaderSessionDelegate {
                                  invalidateAfterFirstRead: true)
         session.begin()
     }
+    
     // MARK: NFCNDEFReaderSessionDelegate
+    
+    // ReaderSession failed
     func readerSession(_ session: NFCNDEFReaderSession, didInvalidateWithError error: Error) {
-        guard let onNFCResult = onNFCResult else {
+        guard let onNFCResult = self.onNFCResult else {
             return
         }
         onNFCResult(false, error.localizedDescription)
     }
+    
+    // ReaderSession succeeded
     func readerSession(_ session: NFCNDEFReaderSession, didDetectNDEFs messages: [NFCNDEFMessage]) {
-        guard let onNFCResult = onNFCResult else {
+        guard let onNFCResult = self.onNFCResult else {
             return
         }
         
+        // Parse message
         for message in messages {
             for record in message.records {
-                if(record.payload.count > 0) {
-                    if let payloadString = String.init(data: record.payload, encoding: .utf8) {
-                        onNFCResult(true, payloadString)
-                    }
-                }
                 if let payloadType = String.init(data: record.type , encoding: .utf8) {
+
+                    // URL type
                     if (payloadType == "U") {
-                        print(record.typeNameFormat.rawValue)
-                        print(payloadType)
-                        print([UInt8](record.payload))
-                        let record = BTRecord(tnf: record.typeNameFormat.rawValue, payloadType: record.type, payloadData: record.payload)
                         
-                        // determine action
-                        record.performAction(withDelay: 2.0)
+                        let record = BTRecord(tnf: record.typeNameFormat.rawValue, payloadType: record.type, payloadData: record.payload)
+
                         //push to table array
                         records.insert(record, at: 0)
+
                     }
+                    
+                    //Smart Poster Type
                     if (payloadType == "Sp") {
-                        var smartPoster = BTSmartPoster(payload: record.payload)
+                        
+                        let smartPoster = BTSmartPoster(payload: record.payload)
+                        
                         for record in smartPoster.records {
-                            if let payload = record.payload {
-                                print(payload)
-                                record.performAction(withDelay: 2.0)
-                                
+                            if (record.payload != nil) {
                                 // push to table array
                                 records.insert(record, at: 0)
                             }
                         }
+                        
                     }
+                    
                 }
             }
         }
+        onNFCResult(true, "Success")
+        records = []
     }
 }
 

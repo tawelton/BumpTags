@@ -56,7 +56,7 @@ extension String {
 struct BTSmartPoster {
     
     var records: [BTRecord] = []
-    var lastRecord = false
+    private var lastRecord = false
     
 
     
@@ -529,6 +529,10 @@ struct BTRecord {
             }
         }
         
+    }
+    
+    mutating func setTitleAs(title:String) {
+        self.title = title
     }
     
     
