@@ -46,31 +46,22 @@ class NFCReader: NSObject, NFCNDEFReaderSessionDelegate {
                         print(record.typeNameFormat.rawValue)
                         print(payloadType)
                         print([UInt8](record.payload))
-                        let uriRecord = BTRecord(tnf: record.typeNameFormat.rawValue, payloadType: record.type, payloadData: record.payload)
+                        let record = BTRecord(tnf: record.typeNameFormat.rawValue, payloadType: record.type, payloadData: record.payload)
                         
+                        // determine action
+                        record.performAction(withDelay: 2.0)
                         //push to table array
-                        records.append(uriRecord)
-                        if let payload = uriRecord.payload {
-                            print("Absolute URI: " + payload)
-                            if let url = URL(string: payload) {
-                                ViewController.openURL(url: url)
-                            }
-                        }
+                        records.insert(record, at: 0)
                     }
                     if (payloadType == "Sp") {
-                        let smartPoster = BTSmartPoster(payload: record.payload)
+                        var smartPoster = BTSmartPoster(payload: record.payload)
                         for record in smartPoster.records {
                             if let payload = record.payload {
                                 print(payload)
-                                if record.payloadType == "U" {
-                                    
-                                    // push to table array
-                                    records.append(record)
-                                    if let url = URL(string: payload) {
-                                        ViewController.openURL(url: url)
-                                        
-                                    }
-                                }
+                                record.performAction(withDelay: 2.0)
+                                
+                                // push to table array
+                                records.insert(record, at: 0)
                             }
                         }
                     }

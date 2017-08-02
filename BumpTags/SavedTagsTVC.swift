@@ -39,6 +39,13 @@ class SavedTagsTVC: UITableViewController{
         return cell
     }
     
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let record = records[indexPath.row]
+        record.performAction()
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
+    
     // ----------------------------------------------------------------------------------------------------
     
     override func viewDidLoad() {

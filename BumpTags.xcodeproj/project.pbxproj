@@ -499,8 +499,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.lyazetechnology.Lyaze5;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "b778abb6-5dbf-428d-b63f-dd281ab9c95d";
-				PROVISIONING_PROFILE_SPECIFIER = "Tanner Work iMac";
+				PROVISIONING_PROFILE = "92037f64-6eb2-4c6b-8c88-dd9384e0efdc";
+				PROVISIONING_PROFILE_SPECIFIER = "Tanner Macbook Air 7/29/17";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -521,8 +521,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.lyazetechnology.Lyaze5;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "b778abb6-5dbf-428d-b63f-dd281ab9c95d";
-				PROVISIONING_PROFILE_SPECIFIER = "Tanner Work iMac";
+				PROVISIONING_PROFILE = "92037f64-6eb2-4c6b-8c88-dd9384e0efdc";
+				PROVISIONING_PROFILE_SPECIFIER = "Tanner Macbook Air 7/29/17";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

@@ -143,16 +143,6 @@ class ViewController: UIViewController {
         helper?.restartSession()
     }
     
-    static func openURL(url: URL) {
-        
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.7) {
-            
-        UIApplication.shared.open(url, options: [:], completionHandler: nil)
-        
-        }
-    
-    }
-    
     
 }
 

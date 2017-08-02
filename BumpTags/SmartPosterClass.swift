@@ -181,6 +181,7 @@ struct BTRecord {
     var payloadType: String
     var payloadArray: [UInt8]
     var payload: String?
+    var title: String?
     
     
     init(array: [UInt8] , tnf: String , payloadType: String , payloadPosition: Int, payloadLength: Int) {
@@ -505,6 +506,32 @@ struct BTRecord {
 //        }
         return payloadString
     }
+    
+    
+    func openURL(url: URL , delay: Double = 0.0) {
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + delay) {
+            
+            UIApplication.shared.open(url, options: [:], completionHandler: nil)
+            
+        }
+        
+    }
+    
+    func performAction(withDelay: Double = 0.0) {
+        
+        if self.payloadType == "U" {
+            
+            // push to table array
+            if let url = URL(string: self.payload!) {
+                self.openURL(url: url, delay: withDelay)
+                
+            }
+        }
+        
+    }
+    
+    
 }
 
     
